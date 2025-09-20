@@ -1,0 +1,468 @@
+:root {
+            --primary: #3b8526;
+            --primary-dark: #2a631b;
+            --secondary: #7d3fb2;
+            --dark: #1a1a1a;
+            --darker: #121212;
+            --light: #f1f1f1;
+            --gray: #444;
+            --success: #4CAF50;
+            --danger: #f44336;
+            --warning: #ff9800;
+            --info: #2196F3;
+            --gold: #ffd700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #222 2%, transparent 2%),
+                radial-gradient(circle at 75% 75%, #222 2%, transparent 2%);
+            background-size: 30px 30px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 #000;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 3px 3px 0 #000, 0 0 5px var(--primary);
+            }
+            to {
+                text-shadow: 3px 3px 0 #000, 0 0 15px var(--primary), 0 0 20px var(--primary);
+            }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #bbb;
+        }
+        
+        .timer-container {
+            background: rgba(0, 0, 0, 0.7);
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(59, 133, 38, 0.5);
+        }
+        
+        .timer-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        #timer {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .timer-unit {
+            background: var(--dark);
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 80px;
+            border: 2px solid var(--gray);
+        }
+        
+        .timer-value {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .timer-label {
+            font-size: 0.7rem;
+            color: #bbb;
+            margin-top: 5px;
+        }
+        
+        .rules-section {
+            background: var(--darker);
+            border: 3px solid var(--gray);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 0 15px rgba(53, 52, 53, 0.5);
+        }
+        
+        .rules-title {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .rules-list {
+            list-style: none;
+        }
+        
+        .rules-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .rules-list li:hover {
+            background: rgba(63, 178, 69, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .rules-list i {
+            margin-right: 10px;
+            color: var(--primary);
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+        
+        .challenges-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        @media (min-width: 768px) {
+            .challenges-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .phase {
+            background: linear-gradient(145deg, #1e1e1e, #252525);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--gray);
+        }
+        
+        .phase-title {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 992px) {
+            .challenges-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .challenge-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid var(--gray);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .challenge-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(59, 133, 38, 0.3);
+        }
+        
+        .challenge-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .challenge-card h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .challenge-card p {
+            text-align: center;
+            color: #bbb;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .progress-container {
+            background: var(--darker);
+            border-radius: 5px;
+            height: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            width: 0;
+            transition: width 1s ease;
+            border-radius: 5px;
+        }
+        
+        .progress-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .challenge-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+        
+        .gold {
+            color: var(--gold);
+        }
+        
+        .register-btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 40px auto;
+            padding: 15px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: var(--dark);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(59, 133, 38, 0.5);
+            border: 2px solid var(--primary);
+            position: relative;
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #bbb;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            color: var(--primary);
+        }
+        
+        .form-title {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #bbb;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 2px solid #444;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: #777;
+            border-top: 1px solid var(--gray);
+        }
+        
+        .pixel-art {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .creeper {
+            background-image: url('https://th.bing.com/th/id/R.29dbbf94efad680f5a63473b628e7cf7?rik=wGBZezZjyFIq%2bw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f3%2fCreeper-Transparent-Background.png&ehk=HIH7uwHBqahSnwnKcJKsu4Wf1un%2f4Q00V4mBPbCMWuQ%3d&risl=&pid=ImgRaw&r=0');
+            top: 20px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+
+        .steve {
+            background-image: url('https://www.pngarts.com/files/9/Lego-Minecraft-Steve-PNG-Image.png');
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(15deg);
+        }
+
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .timer-unit {
+                min-width: 60px;
+            }
+            
+            .timer-value {
+                font-size: 1.5rem;
+            }
+            
+            .phase-title, .rules-title {
+                font-size: 1rem;
+            }
+            
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+        }

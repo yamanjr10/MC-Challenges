@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 2 Week Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pixel-art creeper"></div>
+    <div class="pixel-art steve"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>MINECRAFT 2 WEEK SURVIVAL CHALLENGE</h1>
+                
+                <div class="timer-container">
+                    <div class="timer-title">CHALLENGE STARTS IN:</div>
+                    <div id="timer">
+                        <div class="timer-unit">
+                            <div class="timer-value" id="days">00</div>
+                            <div class="timer-label">DAYS</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="hours">00</div>
+                            <div class="timer-label">HOURS</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="minutes">00</div>
+                            <div class="timer-label">MINUTES</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value" id="seconds">00</div>
+                            <div class="timer-label">SECONDS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="challenges-container">
+                <div class="phase">
+                    <h2 class="phase-title">PHASE 1: SURVIVAL & GEAR</h2>
+                    <div class="challenges-grid">
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-tent"></i></div>
+                            <h3>ESTABLISH BASE</h3>
+                            <p>Build a secure base with essentital facilities</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0% Complete</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-heart"></i></div>
+                            <h3>GAIN 30 HEARTS</h3>
+                            <p>Reach 30 hearts health capacity</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/30 hearts</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-gem"></i></div>
+                            <h3>DIAMOND GEAR</h3>
+                            <p>Acquire full diamond armor amd tools</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0% Complete</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-hammer"></i></div>
+                            <h3>CRAFT MACE</h3>
+                            <p>Craft and fully upgrade a Mace weapon</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">Not Crafted</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-skull"></i></div>
+                            <h3>LIMIT DEATHS</h3>
+                            <p>Complete the challenge with no more than 6 deaths</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/6 Deaths</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-star"></i></div>
+                            <h3>SKILL LEVELING</h3>
+                            <p>Reach level 50 in one skill</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/50 Level</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-fire"></i></div>
+                            <h3>ENTER NETHER</h3>
+                            <p>Build a Nether portal and explore</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">Not Entered</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <h2 class="phase-title">PHASE 2: BOSSES & ENDGAME</h2>
+                    <div class="challenges-grid">
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-heart"></i></div>
+                            <h3>MAX HEARTS</h3>
+                            <p>Reach 50 hearts</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/50 hearts</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>MAX EQUIPMENT</h3>
+                            <p>Fully max netherite tools and armor</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0% Complete</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-skull-crossbones"></i></div>
+                            <h3>KILL 3 WITHERS</h3>
+                            <p>Deaeat wither boss three times</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/3 killed</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-feather-alt"></i></div>
+                            <h3>GET ELYTRA</h3>
+                            <p>Obtain your first Elytra</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">Not Obtained</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fa-brands fa-optin-monster"></i></div>
+                            <h3>KILL WARDEN</h3>
+                            <p>Defeat the terrifying warden</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">Not Killed</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-monument"></i></div>
+                            <h3>3 MAX BEACON</h3>
+                            <p>Build 3 fully powered beacon</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">0/3 Beacons</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card">
+                            <div class="challenge-icon"><i class="fas fa-dragon"></i></div>
+                            <h3>DEFEAT ENDER DRAGON</h3>
+                            <p>Defeat the final boss</p>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 0"></div>
+                                <div class="progress-text">Not Defeated</div>
+                            </div>
+                            <div class="challenge-status">
+                                <span>Status: Not Started</span>
+                                <i class="fas fa-question-circle gold"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <section class="rules-section">
+            <h2 class="rules-title">CHALLENGE RULES</h2>
+            <ul class="rules-list">
+                <li><i class="fas fa-calendar-alt"></i> The challenge runs from Oct 5th to Oct 18th, 2025 (14 days)</li>
+                <li><i class="fas fa-plus-circle"></i> All players must start fresh with no existing equipment</li>
+                <li><i class="fas fa-ban"></i> No cheating or use of mods that give unfair advantages</li>
+                <li><i class="fas fa-balance-scale"></i> The server will run on normal difficulty</li>
+                <li><i class="fas fa-flag-checkered"></i> All objectives must be completed before time runs out</li>
+                <li><i class="fas fa-users"></i> Play solo or form a team - it's your choice!</li>
+                <li><i class="fas fa-heart"></i> Hearts are gained through achievements, not PVP</li>
+                <li><i class="fas fa-seedling"></i> The world seed will be revealed after the challenge begins</li>
+            </ul>
+        </section>
+            
+            <button class="register-btn" id="registerBtn">REGISTER NOW <i class="fas fa-chevron-right"></i></button>
+        </main>
+        
+        <footer>
+            <p>Minecraft Mastery Challenge &copy; 2025. Not affiliated with Mojang or Microsoft.</p>
+        </footer>
+    </div>
+    
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2 class="form-title">REGISTER FOR CHALLENGE</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Minecraft Username</label>
+                    <input type="text" id="username" name="username" required placeholder="use . before name if using pe">
+                </div>
+                <div class="form-group">
+                    <label for="aternosName">Aternos Username</label>
+                    <input type="text" id="aternosName" name="aternosName" required placeholder="Enter your Aternos username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="yourmail@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="discord">Discord Username</label>
+                    <input type="text" id="discord" name="discord" required placeholder="Username#1234">
+                </div>
+                <div class="form-group">
+                    <label for="experience">Minecraft Experience Level</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select your experience</option>
+                        <option value="beginner">Beginner (0-6 months)</option>
+                        <option value="intermediate">Intermediate (6 months - 2 years)</option>
+                        <option value="advanced">Advanced (2-4 years)</option>
+                        <option value="expert">Expert (4+ years)</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT REGISTRATION</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
