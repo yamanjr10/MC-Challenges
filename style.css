@@ -395,7 +395,49 @@
             border-color: var(--primary);
             outline: none;
         }
-        
+
+        /* Improved responsive styles for modal */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  
+  .form-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .form-group input, 
+  .form-group select {
+    padding: 14px; /* Larger touch targets */
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .submit-btn {
+    padding: 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Prevent horizontal scrolling on mobile */
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Better landscape support */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-content {
+    max-height: 80vh;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+}
+
         .submit-btn {
             width: 100%;
             padding: 15px;
@@ -466,3 +508,33 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker);
+    border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+    border: 2px solid #1a1a1a;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--primary-dark), #2a531b);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--darker);
+}
+
+/* Firefox compatible scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--darker);
+}
